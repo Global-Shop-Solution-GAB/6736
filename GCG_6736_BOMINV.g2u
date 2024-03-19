@@ -1,0 +1,1106 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.frmDash..Create(BaseForm)
+Gui.frmDash..Caption("BOM Dashboard (6736)")
+Gui.frmDash..Size(12690,10500)
+Gui.frmDash..MinX(0)
+Gui.frmDash..MinY(0)
+Gui.frmDash..Position(0,0)
+Gui.frmDash..BackColor(-2147483633)
+Gui.frmDash..MousePointer(0)
+Gui.frmDash..Event(UnLoad,frmDash_UnLoad)
+Gui.frmDash..AlwaysOnTop(False)
+Gui.frmDash..FontName("Tahoma")
+Gui.frmDash..FontSize(8.25)
+Gui.frmDash..ControlBox(True)
+Gui.frmDash..MaxButton(True)
+Gui.frmDash..MinButton(True)
+Gui.frmDash..Moveable(True)
+Gui.frmDash..Sizeable(True)
+Gui.frmDash..ShowInTaskBar(True)
+Gui.frmDash..TitleBar(True)
+Gui.frmDash.GsGridDash.Create(GsGridControl)
+Gui.frmDash.GsGridDash.Size(12570,9150)
+Gui.frmDash.GsGridDash.Position(0,1065)
+Gui.frmDash.GsGridDash.Event(RowCellClick,GsGridDash_RowCellClick)
+Gui.frmDash.GsGridDash.Anchor(15)
+Gui.frmDash.GsGridDash.Enabled(True)
+Gui.frmDash.GsGridDash.Visible(True)
+Gui.frmDash.GsGridDash.Zorder(0)
+Gui.frmDash.cmdRefresh.Create(Button)
+Gui.frmDash.cmdRefresh.Size(1005,735)
+Gui.frmDash.cmdRefresh.Position(10245,60)
+Gui.frmDash.cmdRefresh.Caption("Refresh")
+Gui.frmDash.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.frmDash.cmdRefresh.Enabled(False)
+Gui.frmDash.cmdRefresh.Anchor(9)
+Gui.frmDash.cmdRefresh.Visible(True)
+Gui.frmDash.cmdRefresh.Zorder(0)
+Gui.frmDash.cmdRefresh.FontName("Tahoma")
+Gui.frmDash.cmdRefresh.FontSize(8.25)
+Gui.frmDash.cmdExport.Create(Button)
+Gui.frmDash.cmdExport.Size(1005,750)
+Gui.frmDash.cmdExport.Position(11430,45)
+Gui.frmDash.cmdExport.Caption("Export")
+Gui.frmDash.cmdExport.Event(Click,cmdExport_Click)
+Gui.frmDash.cmdExport.Enabled(False)
+Gui.frmDash.cmdExport.Anchor(9)
+Gui.frmDash.cmdExport.Visible(True)
+Gui.frmDash.cmdExport.Zorder(0)
+Gui.frmDash.cmdExport.FontName("Tahoma")
+Gui.frmDash.cmdExport.FontSize(8.25)
+Gui.frmDash.lbl1.Create(Label,"BOM Parent :",True,1185,255,0,135,180,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmDash.lbl1.BorderStyle(0)
+Gui.frmDash.txtParent.Create(TextBox,"",True,2310,300,0,1230,105,True,0,"Arial",8,-2147483643,1)
+Gui.frmDash.txtParent.Event(KeyPressEnter,txtParent_KeyPressEnter)
+Gui.frmDash.txtParent.ToolTip("Press 'Enter' to load")
+Gui.frmDash.frame_desc.Create(Frame)
+Gui.frmDash.frame_desc.Size(5445,6150)
+Gui.frmDash.frame_desc.Position(3165,2190)
+Gui.frmDash.frame_desc.Visible(False)
+Gui.frmDash.frame_desc.Anchor(15)
+Gui.frmDash.frame_desc.Enabled(True)
+Gui.frmDash.frame_desc.Zorder(0)
+Gui.frmDash.frame_desc.Caption("")
+Gui.frmDash.frame_desc.FontName("Tahoma")
+Gui.frmDash.frame_desc.FontSize(8.25)
+Gui.frmDash.cmddescClose.Create(Button)
+Gui.frmDash.cmddescClose.Size(1125,435)
+Gui.frmDash.cmddescClose.Position(1965,5565)
+Gui.frmDash.cmddescClose.Parent("frame_desc")
+Gui.frmDash.cmddescClose.Caption("Close")
+Gui.frmDash.cmddescClose.Event(Click,cmddescClose_Click)
+Gui.frmDash.cmddescClose.Anchor(2)
+Gui.frmDash.cmddescClose.Enabled(True)
+Gui.frmDash.cmddescClose.Visible(True)
+Gui.frmDash.cmddescClose.Zorder(0)
+Gui.frmDash.cmddescClose.FontName("Tahoma")
+Gui.frmDash.cmddescClose.FontSize(8.25)
+Gui.frmDash.txtExtdesc.Create(TextboxM)
+Gui.frmDash.txtExtdesc.Size(5160,5205)
+Gui.frmDash.txtExtdesc.Position(150,225)
+Gui.frmDash.txtExtdesc.Parent("frame_desc")
+Gui.frmDash.txtExtdesc.Anchor(15)
+Gui.frmDash.txtExtdesc.Enabled(True)
+Gui.frmDash.txtExtdesc.Visible(True)
+Gui.frmDash.txtExtdesc.Zorder(0)
+Gui.frmDash.txtExtdesc.FontName("Tahoma")
+Gui.frmDash.txtExtdesc.FontSize(8.25)
+Gui.frmDash.cmdcopybom.Create(Button)
+Gui.frmDash.cmdcopybom.Size(1020,375)
+Gui.frmDash.cmdcopybom.Position(3675,75)
+Gui.frmDash.cmdcopybom.Caption("Copy Bom")
+Gui.frmDash.cmdcopybom.Event(Click,cmdcopybom_Click)
+Gui.frmDash.cmdcopybom.Enabled(False)
+Gui.frmDash.cmdcopybom.Visible(True)
+Gui.frmDash.cmdcopybom.Zorder(0)
+Gui.frmDash.cmdcopybom.FontName("Tahoma")
+Gui.frmDash.cmdcopybom.FontSize(8.25)
+Gui.frmDash.cmdclear.Create(Button)
+Gui.frmDash.cmdclear.Size(1020,375)
+Gui.frmDash.cmdclear.Position(3690,510)
+Gui.frmDash.cmdclear.Caption("&Clear")
+Gui.frmDash.cmdclear.Event(Click,cmdclear_Click)
+Gui.frmDash.cmdclear.Enabled(True)
+Gui.frmDash.cmdclear.Visible(True)
+Gui.frmDash.cmdclear.Zorder(0)
+Gui.frmDash.cmdclear.FontName("Tahoma")
+Gui.frmDash.cmdclear.FontSize(8.25)
+Gui.frmDash.optView.Create(Option)
+Gui.frmDash.optView.Size(960,255)
+Gui.frmDash.optView.Position(465,615)
+Gui.frmDash.optView.Caption("View")
+Gui.frmDash.optView.Enabled(True)
+Gui.frmDash.optView.Visible(True)
+Gui.frmDash.optView.Zorder(0)
+Gui.frmDash.optView.FontName("Tahoma")
+Gui.frmDash.optView.FontSize(8.25)
+Gui.frmDash.optEdit.Create(Option)
+Gui.frmDash.optEdit.Size(960,255)
+Gui.frmDash.optEdit.Position(1770,615)
+Gui.frmDash.optEdit.Caption("Edit")
+Gui.frmDash.optEdit.Enabled(False)
+Gui.frmDash.optEdit.Visible(True)
+Gui.frmDash.optEdit.Zorder(0)
+Gui.frmDash.optEdit.FontName("Tahoma")
+Gui.frmDash.optEdit.FontSize(8.25)
+Gui.frmDash.cmdLookup.Create(Button)
+Gui.frmDash.cmdLookup.Enabled(True)
+Gui.frmDash.cmdLookup.Visible(True)
+Gui.frmDash.cmdLookup.Zorder(0)
+Gui.frmDash.cmdLookup.Size(345,345)
+Gui.frmDash.cmdLookup.Position(3135,525)
+Gui.frmDash.cmdLookup.Caption("")
+Gui.frmDash.cmdLookup.FontName("Tahoma")
+Gui.frmDash.cmdLookup.FontSize(8.25)
+Gui.frmDash.cmdLookup.SvgPicture("icon_browser_color")
+Gui.frmDash.cmdLookup.Event(Click,cmdLookup_Click)
+Gui.frmcopypart..Create(BaseForm)
+Gui.frmcopypart..Caption("Copy BOM")
+Gui.frmcopypart..Size(6360,4470)
+Gui.frmcopypart..MinX(0)
+Gui.frmcopypart..MinY(0)
+Gui.frmcopypart..Position(0,0)
+Gui.frmcopypart..BackColor(-2147483633)
+Gui.frmcopypart..MaxButton(False)
+Gui.frmcopypart..MinButton(False)
+Gui.frmcopypart..MousePointer(0)
+Gui.frmcopypart..Event(UnLoad,frmcopypart_UnLoad)
+Gui.frmcopypart..AlwaysOnTop(False)
+Gui.frmcopypart..FontName("Tahoma")
+Gui.frmcopypart..FontSize(8.25)
+Gui.frmcopypart..ControlBox(True)
+Gui.frmcopypart..Moveable(True)
+Gui.frmcopypart..Sizeable(True)
+Gui.frmcopypart..ShowInTaskBar(True)
+Gui.frmcopypart..TitleBar(True)
+Gui.frmcopypart.lbl1.Create(Label,"Parent :",True,750,255,0,60,345,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmcopypart.lbl1.BorderStyle(0)
+Gui.frmcopypart.txtCPart.Create(TextBox,"",True,2085,300,0,840,300,True,0,"Arial",8,-2147483643,1)
+Gui.frmcopypart.txtCPart.MaxLength(17)
+Gui.frmcopypart.txtCRev.Create(TextBox,"",True,690,300,0,840,810,True,0,"Arial",8,-2147483643,1)
+Gui.frmcopypart.txtCRev.MaxLength(3)
+Gui.frmcopypart.lbl2.Create(Label,"Rev :",True,555,255,0,60,855,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmcopypart.lbl2.BorderStyle(0)
+Gui.frmcopypart.txtCDesc.Create(TextBox,"",True,5205,300,0,840,1320,True,0,"Arial",8,-2147483643,1)
+Gui.frmcopypart.txtCDesc.MaxLength(30)
+Gui.frmcopypart.lbl3.Create(Label,"Desc :",True,660,255,0,60,1365,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmcopypart.lbl3.BorderStyle(0)
+Gui.frmcopypart.txtcUOM.Create(TextBox,"",True,570,300,0,840,1830,True,0,"Arial",8,-2147483643,1)
+Gui.frmcopypart.lbl4.Create(Label,"UM :",True,570,255,0,60,1875,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmcopypart.lbl4.BorderStyle(0)
+Gui.frmcopypart.txtcPrice.Create(TextBox,"",False,1170,300,0,840,2895,True,0,"Arial",8,-2147483643,1)
+Gui.frmcopypart.txtcPrice.NumericOnly(1)
+Gui.frmcopypart.lbl5.Create(Label,"Cost :",False,645,255,0,60,2940,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmcopypart.lbl5.BorderStyle(0)
+Gui.frmcopypart.cmdCopyPart.Create(Button)
+Gui.frmcopypart.cmdCopyPart.Size(1425,375)
+Gui.frmcopypart.cmdCopyPart.Position(60,3465)
+Gui.frmcopypart.cmdCopyPart.Caption("Copy BOM")
+Gui.frmcopypart.cmdCopyPart.Event(Click,cmdCopyPart_Click)
+Gui.frmcopypart.cmdCopyPart.Enabled(True)
+Gui.frmcopypart.cmdCopyPart.Visible(True)
+Gui.frmcopypart.cmdCopyPart.Zorder(0)
+Gui.frmcopypart.cmdCopyPart.FontName("Tahoma")
+Gui.frmcopypart.cmdCopyPart.FontSize(8.25)
+Gui.frmcopypart.cmdPL.Create(Button)
+Gui.frmcopypart.cmdPL.Size(405,345)
+Gui.frmcopypart.cmdPL.Position(1455,2355)
+Gui.frmcopypart.cmdPL.Caption("^")
+Gui.frmcopypart.cmdPL.Event(Click,cmdPL_Click)
+Gui.frmcopypart.cmdPL.Enabled(True)
+Gui.frmcopypart.cmdPL.Visible(True)
+Gui.frmcopypart.cmdPL.Zorder(0)
+Gui.frmcopypart.cmdPL.FontName("Tahoma")
+Gui.frmcopypart.cmdPL.FontSize(8.25)
+Gui.frmcopypart.lbl6.Create(Label,"PL :",True,615,255,0,60,2415,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmcopypart.lbl6.BorderStyle(0)
+Gui.frmcopypart.txtCPL.Create(TextBox,"",True,570,300,0,840,2370,True,0,"Arial",8,-2147483643,1)
+Gui.frmcopypart.txtCPL.Locked(True)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.External.Include.Library("GCG_5875_Try_Catch.lib")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+V.Local.bBOMAccess.Declare
+V.Local.bInvAccess.Declare
+F.Intrinsic.Control.Try
+
+F.ODBC.Connection!con.OpenCompanyConnection(500)
+
+'Bill Of Material > File > Bill Of Material
+F.Global.Security.CheckUserAccessIPM(467,V.Local.bBOMAccess)
+F.Global.Security.CheckUserAccessIPM(310,V.Local.bInvAccess)
+F.Intrinsic.Control.If(V.Local.bBOMAccess)
+	Gui.frmDash.optEdit.Enabled(True)
+	Gui.frmDash.cmdcopybom.Enabled(True)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bInvAccess)
+	Gui.frmDash.optEdit.Enabled(True)
+F.Intrinsic.Control.EndIf
+Gui.frmDash.optView.Value(True)
+
+'F.Data.DataTable.CreateFromSQL("dtBOMList","con","select PARENT from V_BOM_MSTR where sequence_BOM = '0000';")
+'F.Data.DataTable.AddExpressionColumn("dtBOMList","PARENT_FORMAT","String","trim([PARENT])")
+'F.Data.Dictionary.CreateFromDataTable("dictBOMList","dtBOMList","PARENT_FORMAT","PARENT_FORMAT")
+'F.Data.DataTable.Close("dtBOMList")
+'Gui.frmDash.txtParent.AddAutoCompleteItem("dictBOMList","Dictionary")
+
+'f.Intrinsic.Control.CallSub(loaddata)
+gui.frmDash..Show 
+'gui.frmDash..WindowState(2)
+'gui.frmDash.txtParent.Text("210900RAN")
+'gui.frmDash.txtParent.SetFocus 
+gui.frmDash.GsGridDash.Anchor(15)
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.frmDash_UnLoad.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.DataTable.dtChild.Exists)
+	F.Intrinsic.Control.CallSub(Serialize)
+	F.Data.DataTable.Close("dtChild")
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!con.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.frmDash_UnLoad.End
+
+Program.Sub.LoadData.Start
+V.Local.sSql.Declare(String)
+V.Local.ifor.Declare(long)
+v.Local.iret.Declare(long)
+v.Local.stitle.Declare(String)
+v.Local.sRet.Declare 
+V.Local.dLeadDate.Declare
+V.Local.iVisibleIndex.Declare
+V.Local.iColumn.Declare(Long)
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(v.DataTable.DTINVTemp.Exists,=,True)
+	f.Data.DataTable.Close("DTINVTemp")
+f.Intrinsic.Control.EndIf 
+
+F.Intrinsic.Control.If(v.DataTable.dtChild.Exists,=,True)
+	F.Intrinsic.Control.CallSub(Serialize)
+	f.Data.DataTable.Close("dtChild")
+f.Intrinsic.Control.EndIf 
+
+
+f.Data.DataTable.Create("DTINVTemp",True)
+
+f.Data.DataTable.AddColumn("DTINVTemp","Line",string)
+f.Data.DataTable.AddColumn("DTINVTemp","Seq",string)
+f.Data.DataTable.AddColumn("DTINVTemp","Part",string)
+f.Data.DataTable.AddColumn("DTINVTemp","Description",string)
+f.Data.DataTable.AddColumn("DTINVTemp","Source",string)
+f.Data.DataTable.AddColumn("DTINVTemp","Count1",string)
+f.Data.DataTable.AddColumn("DTINVTemp","Parent",string)
+f.Data.DataTable.AddColumn("DTINVTemp","filler",string)
+f.Data.DataTable.AddColumn("DTINVTemp","UM",string)
+f.Data.DataTable.AddColumn("DTINVTemp","GSS_EXTRA_DESC",string)
+f.Data.DataTable.AddColumn("DTINVTemp","REL",string)
+'F.Data.DataTable.AddColumn("DTINVTemp", "CAT", STRING)
+
+'f.Data.DataTable.AddColumn("DtParent$DTChild","MfgPart",string)
+'f.Data.DataTable.AddColumn("DtParent$DTChild","MfgName",string)
+'f.Data.DataTable.AddColumn("DTINVTemp","BOMComplete",string)
+f.Data.DataTable.AddColumn("DTINVTemp","RouterComplete",String)
+'f.Data.DataTable.AddColumn("DtParent$DTChild","UnitCost",string)
+f.Data.DataTable.AddColumn("DTINVTemp","ParentFLAG",string)
+'f.Data.DataTable.AddColumn("DtParent$DTChild","Vendor",string)
+'f.Data.DataTable.AddColumn("DtParent$DTChild","VendorName",string)
+f.Data.DataTable.AddColumn("DTINVTemp","CSupply",string)
+
+
+
+Function.Intrinsic.UI.InvokeWaitDialog("Loading Data...")
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'
+'F.Intrinsic.Control.For(v.Local.ifor,0,v.dataTable.DTINVTemp.RowCount--,1)
+'	f.Intrinsic.String.Build("{0}-{1}",v.datatable.DTINVTemp(v.Local.ifor).Part.fieldvaltrim,v.Local.ifor,v.Local.sRet)
+'	F.Data.DataTable.SetValue("DTINVTemp",v.Local.ifor,"REL",v.Local.sRet)
+'	Function.Intrinsic.UI.ChangeWaitStatus("Loding BOM ....", v.Local.ifor, 0, v.dataTable.DTINVTemp.RowCount--) 
+	f.Intrinsic.Control.CallSub(explode_bom,"Parent",v.Screen.frmDash!txtParent.Text,"Ln",v.Local.ifor)
+'f.Intrinsic.Control.Next(v.Local.ifor)
+
+Function.Data.DataTable.AddExpressionColumn("DTINVTemp", "PartN","string","SUBSTRING(Part,1,17)")
+Function.Data.DataTable.AddExpressionColumn("DTINVTemp", "REV","string","SUBSTRING(Part,18,3)")
+Function.Data.DataTable.AddExpressionColumn("DTINVTemp", "PartO","string","SUBSTRING(Part,1,20)")
+Function.Data.DataTable.AddExpressionColumn("DTINVTemp", "PartTrim","string","TRIM([PART])")
+
+F.Data.DataTable.AddColumn("DTINVTEMP", "BOM_COMPLETE", "STRING")
+'F.Data.Dictionary.CreateFromSQL("dicBOMComp", "con","SELECT  LTRIM(RTRIM(A.PARENT)) AS PART, A.BOM_COMPLETE FROM V_BOM_MSTR A WHERE A.PART = ''")
+'f.Data.Dictionary.SetDefaultReturn("dicBOMComp", "")
+'F.Data.DataTable.FillFromDictionary("DTINVTEMP", "dicBOMComp", "PartTrim", "BOM_COMPLETE")
+'F.Data.Dictionary.Close("dicBOMComp")
+
+'F.Data.DataTable.AddColumn("DTINVTEMP", "BOM_COMPLETE", "STRING")
+F.Data.Dictionary.CreateFromSQL("dicBOMComp", "con","SELECT  LTRIM(RTRIM(A.PARENT)) AS PART, A.BOM_COMPLETE FROM V_BOM_MSTR A WHERE A.SEQUENCE_BOM = '0000'")
+f.Data.Dictionary.SetDefaultReturn("dicBOMComp", "")
+F.Data.DataTable.FillFromDictionary("DTINVTEMP", "dicBOMComp", "PartTrim", "BOM_COMPLETE")
+F.Data.Dictionary.Close("dicBOMComp")
+
+F.Data.DataTable.RemoveColumn("DTINVTEMP", "PartTrim")
+
+'Get partno list
+f.Data.DataView.Create("DTINVTemp","DVSTemp")
+Function.Data.DataView.ToDataTableDistinct("DTINVTemp","DVSTemp","DTTemp","Part")
+f.Data.DataView.Create("DTTemp","DVSTemp")
+Function.Data.DataView.ToString("DTTemp", "DVSTemp", "Part", "*!*", ",", V.Local.sRet)
+
+f.Intrinsic.String.Split(V.Local.sRet,",",V.Local.sRet)
+F.Intrinsic.Control.For(v.Local.ifor,0,V.Local.sRet.UBound,1)
+	f.Intrinsic.String.Build("'{0}'",V.Local.sRet(v.Local.ifor),V.Local.sRet(v.Local.ifor))
+f.Intrinsic.Control.Next(v.Local.ifor)
+f.Intrinsic.String.Join(V.Local.sRet,",",V.Local.sRet)
+
+
+'v.Local.sSql.set("select distinct Mstr.part,(select top 1 Mfg_part from v_INV_CROSS_REF Inv where  vendor <> '' and Inv.part = Mstr.part) MfgPart,(select top 1 Mfg_name from v_INV_CROSS_REF Inv")
+'f.Intrinsic.String.Build(" {0} where  vendor <> '' and Inv.part = Mstr.part) MfgName,amt_cost as UnitCost from v_INVENTORY_MSTR Mstr where Mstr.part IN ({1})",v.Local.sSql,V.Local.sRet,v.Local.sSql)
+
+' v.Local.sSql.set("select distinct Mstr.part,(select top 1 Mfg_part from v_INV_CROSS_REF Inv where  vendor <> '' and Inv.part = Mstr.part) MfgPart,(select top 1 Mfg_name from v_INV_CROSS_REF Inv")
+'f.Intrinsic.String.Build(" {0} where  vendor <> '' and Inv.part = Mstr.part) MfgName,amt_cost as UnitCost,DETT.text as GSS_EXTRA_DESC,BOM_Complete,Rtr.complete  RouterComplete,Mstr.UM_Inventory as UM,Mstr.Product_Line from v_INVENTORY_MSTR Mstr left join INV_EXTRA_TEXT DETT on DETT.part = Mstr.part",v.Local.sSql,v.Local.sSql)
+'f.Intrinsic.String.Build(" {0} left Join bom_mstr BOM on Mstr.part = BOM.parent and BOM.part = '' left Join v_ROUTER_SUPP RTR on RTR.Rtr_Num = BOM.parent where Mstr.part IN ({1})",v.Local.sSql,V.Local.sRet,v.Local.sSql)
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+'In 2017.1 'v_ROUTER_SUPP changed to v_ROUTER_SUPP_HDR
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+f.Intrinsic.Control.If(V.Caller.GSSVersion,<,2017.1)
+	 v.Local.sSql.set("select distinct Mstr.part")
+	f.Intrinsic.String.Build(" {0},DETT.text as GSS_EXTRA_DESC,CASE WHEN RTR.COMPLETE = '0' THEN '' WHEN COMPLETE = '1' THEN 'Y' END AS RouterComplete,Mstr.UM_Inventory as UM,Mstr.Product_Line from v_INVENTORY_MSTR Mstr left join INV_EXTRA_TEXT DETT on DETT.part = Mstr.part",v.Local.sSql,v.Local.sSql)
+	f.Intrinsic.String.Build(" {0} left Join bom_mstr BOM on Mstr.part = BOM.parent and BOM.part = '' left Join v_ROUTER_SUPP RTR on RTR.Rtr_Num = MSTR.parent where LTrim(Mstr.part) IN ({1})",v.Local.sSql,V.Local.sRet,v.Local.sSql)
+f.Intrinsic.Control.Else 
+	 v.Local.sSql.set("select distinct Mstr.part")
+	f.Intrinsic.String.Build(" {0},DETT.text as GSS_EXTRA_DESC,CASE WHEN RTR.COMPLETE = '0' THEN '' WHEN COMPLETE = '1' THEN 'Y' END AS RouterComplete,Mstr.UM_Inventory as UM,Mstr.Product_Line, CASE WHEN MSTR.FLAG_INACTIVE = 'Y' THEN 'Y' ELSE '' END AS INACTIVE from v_INVENTORY_MSTR Mstr left join INV_EXTRA_TEXT DETT on DETT.part = Mstr.part",v.Local.sSql,v.Local.sSql)
+	f.Intrinsic.String.Build(" {0} left Join bom_mstr BOM on Mstr.part = BOM.parent and BOM.part = '' left Join v_ROUTER_SUPP_HDR RTR on RTR.Rtr_Num = MSTR.PART where LTrim(Mstr.part) IN ({1})",v.Local.sSql,V.Local.sRet,v.Local.sSql)
+f.Intrinsic.Control.EndIf 
+
+
+f.Data.DataTable.CreateFromSQL("DTattr","con",v.Local.sSql)
+
+'F.Data.Linq.Join("Innerjoin","DataTable","DtParent$dtChild*!*Temp","DataTable","DTattr*!*TempDT","Temp.Part = TempDT.Part","Temp.PO_REQ*!*Temp.PO_REQ_LINE","","","Temp.Location","DTBatchTemp",True)
+'GSS_EXTRA_DESC
+F.Data.Linq.Join("leftjoin","DataTable","DTINVTemp*!*Temp","DataTable","DTattr*!*TempDT","Temp.PartO = TempDT.Part","Temp.Line*!*Temp.Seq*!*Temp.PartO*!*Temp.Description*!*Temp.Source*!*Temp.Count1*!*Temp.Parent*!*Temp.filler*!*TempDT.UM*!*TempDT.GSS_EXTRA_DESC*!*Temp.REL*!*Temp.BOM_Complete*!*TempDT.RouterComplete*!*Temp.ParentFLAG*!*TempDT.Inactive*!*Temp.CSupply*!*Temp.PartN*!*Temp.REV*!*TempDT.Product_Line*!*Temp.Cat","","","","dtChild",True)
+
+F.Data.Dictionary.CreateFromSQL("dictPick","con","select distinct router, 'Y' from ROUTER_LINE where part_wc_outside = 'PICK'")
+F.Data.Datatable.AddColumn("dtChild","Pick","String")
+F.Data.Dictionary.SetDefaultReturn("dictPick","")
+F.Data.Datatable.FillFromDictionary("dtChild","dictPick","PartN","Pick")
+F.Data.Dictionary.Close("dictPick")
+
+F.Data.Datatable.AddExpressionColumn("dtChild","PickFinal","String","IIF([PICK] = 'Y', 'Y',IIF([PRODUCT_LINE] = 'SA', 'N',''))")
+
+
+F.Data.DataView.Create("dtChild","DVChild")
+
+f.Data.DataTable.AddColumn("dtChild","Trmnl",string)
+
+F.Data.DataTable.SetValue("dtChild",-1,"Trmnl",v.Caller.Terminal)
+
+gui.frmDash.GsGridDash.AddGridviewFromDataview("GVChild","dtChild","DVChild")
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+
+'gui.frmDash.GsGridDash.SetColumnProperty("GVChild","PartN","CellForeColor","Blue")
+
+'gui.frmDash.GsGridDash.AddStyleFormatCOndition("GVChild", "ParentFLAG", "tagName1","Equal","Y")
+'gui.frmDash.GsGridDash.SetStyleFormatCOnditionProperty("GVChild",  "ParentFLAG", "tagName1", "backcolor", "aliceblue")
+'gui.frmDash.GsGridDash.SetStyleFormatCOnditionProperty("GVChild",  "ParentFLAG", "tagName1", "ApplyToRow", True)
+''	
+'gui.frmDash.GsGridDash.AddStyleFormatCOndition("GVChild", "ParentFLAG", "tagName2","Equal","Y")
+'gui.frmDash.GsGridDash.SetStyleFormatCOnditionProperty("GVChild","ParentFLAG", "tagName2", "ForeColor", "Blue")
+'gui.frmDash.GsGridDash.SetStyleFormatCOnditionProperty("GVChild",  "ParentFLAG", "tagName2", "ApplyToRow", True)
+
+'Gui.frmDash.GsGridDash.AddStyleFormatCondition("GVChild","PickFinal","PICK WC",V.Enum.ConditionalOperations!Equal,"Y")
+'Gui.frmDash.GsGridDash.SetStyleFormatConditionProperty("GVChild","PickFinal","PICK WC",V.Enum.ConditionalPropertyNames!BackColor,"Green")
+
+'Gui.frmDash.GsGridDash.AddStyleFormatCondition("GVChild","PickFinal","NO PICK WC",V.Enum.ConditionalOperations!Equal,"N")
+'Gui.frmDash.GsGridDash.SetStyleFormatConditionProperty("GVChild","PickFinal","NO PICK WC",V.Enum.ConditionalPropertyNames!BackColor,"Red")
+
+'Gui.frmDash.GsGridDash.AddStyleFormatCondition("GVChild","INACTIVE","INACTIVE",V.Enum.ConditionalOperations!Equal,"Y")
+'Gui.frmDash.GsGridDash.SetStyleFormatConditionProperty("GVChild","INACTIVE","INACTIVE",V.Enum.ConditionalPropertyNames!BackColor,"Red")
+
+
+F.Intrinsic.Control.For(V.Local.ifor, 0, V.DataView.dtChild!DVChild.RowCount--,1)
+	F.Intrinsic.Control.If(V.DataView.dtChild!DVChild(V.Local.ifor).ParentFlag!FieldValTrim,=,"Y", "AND", V.DataView.dtChild!DVChild(V.Local.ifor).BOM_COMPLETE!FieldValTrim,=,"")
+		Gui.frmDash.GsGridDash.GetColumnIndexByName("GVChild", "BOM_COMPLETE", V.Local.iColumn)
+		Gui.frmDash.GsGridDash.SetCellAppearance("GVChild", V.Local.iColumn, V.Local.ifor,"BackColor", "Red")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.DataView.dtChild!DVChild(V.Local.ifor).ParentFlag!FieldValTrim,=,"Y", "AND", V.DataView.dtChild!DVChild(V.Local.ifor).RouterComplete!FieldVal,=,False)
+		Gui.frmDash.GsGridDash.GetColumnIndexByName("GVChild", "RouterComplete", V.Local.iColumn)
+		Gui.frmDash.GsGridDash.SetCellAppearance("GVChild", V.Local.iColumn, V.Local.ifor,"BackColor", "Red")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.ifor)
+
+
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","UM","Visible",True)
+'gui.frmDash.GsGridDash.SetColumnProperty("GVChild","RouterComplete","Visible",False)
+'gui.frmDash.GsGridDash.SetColumnProperty("GVChild","BOM_Complete","Visible",False)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Trmnl","Visible",False)
+
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Source","Visible",True)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","filler","Visible",False)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Parent","Visible",False)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","ParentFlag","Visible",False)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","REL","Visible",False)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Product_Line","Visible",False)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Pick","Visible",False)
+
+gui.frmDash.GsGridDash.SetGridviewProperty("GVChild","Editable",False)
+gui.frmDash.GsGridDash.SetGridviewProperty("GVChild","ReadOnly",True)
+
+gui.frmDash.GsGridDash.ColumnEdit("GVChild","CSupply", "EditorButton", "Supply Demand")
+'gui.frmDash.GsGridDash.ColumnEdit("GVChild","GSS_EXTRA_DESC", "EditorButton", "Extended Desc")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","PartN","Caption","Part")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Rev","Caption","Rev")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Description","Caption","Description")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","BOM_Complete","Caption","BOM Complete")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","RouterComplete","Caption","Router Complete")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","ParentFLAG","Caption","Parent")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","GSS_EXTRA_DESC","Caption","Ext Description")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Count1","Caption","Quantity")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","CSupply","Caption"," ")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Source","Caption","Source")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Cat","Caption","Category")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","INACTIVE","Caption","Inactive")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","PickFinal","Caption","PICK WC")
+
+Gui.frmDash.GsGridDash.SetColumnProperty("GVChild","PartN","CellFontUnderline",True)
+
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Line","Visible",False)
+'gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Part","Visible",False)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","PartO","Visible",False)
+
+V.Local.iVisibleIndex.Set(-1)
+'gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Line","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Seq","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","PartN","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Rev","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Description","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","GSS_EXTRA_DESC","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","SOURCE","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","UM","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Count1","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","BOM_Complete","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","RouterComplete","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","ParentFLAG","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","CSupply","VisibleIndex",V.Local.iVisibleIndex.++)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Cat","VisibleIndex",V.Local.iVisibleIndex.++)
+
+
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","GSS_EXTRA_DESC","MinWidth","250")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","GSS_EXTRA_DESC","MaxWidth","800")
+
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","UM","MinWidth","30")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","UM","MaxWidth","30")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Rev","MinWidth","40")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Rev","MaxWidth","40")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Description","MinWidth","200")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Description","MaxWidth","250")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","PartN","MinWidth","130")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","PartN","MaxWidth","150")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Source","MinWidth","50")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Source","MaxWidth","75")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Cat","MinWidth","75")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","Cat","MaxWidth","95")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","CSupply","MinWidth","100")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","CSupply","MaxWidth","100")
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","RouterComplete","MinWidth",75)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","RouterComplete","MaxWidth",100)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","BOM_COMPLETE","MinWidth",75)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","BOM_COMPLETE","MaxWidth",100)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","INACTIVE","MinWidth",75)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","INACTIVE","MaxWidth",100)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","PICKFINAL","MinWidth",75)
+gui.frmDash.GsGridDash.SetColumnProperty("GVChild","PICKFINAL","MaxWidth",100)
+
+
+
+gui.frmDash.GsGridDash.MainView("GVChild")
+
+F.Intrinsic.Control.CallSub(Deserialize)
+
+gui.frmDash.GsGridDash.AddStyleFormatCOndition("GVChild", "ParentFLAG", "tagName1","Equal","Y")
+gui.frmDash.GsGridDash.SetStyleFormatCOnditionProperty("GVChild",  "ParentFLAG", "tagName1", "backcolor", "aliceblue")
+gui.frmDash.GsGridDash.SetStyleFormatCOnditionProperty("GVChild",  "ParentFLAG", "tagName1", "ApplyToRow", True)
+'	
+gui.frmDash.GsGridDash.AddStyleFormatCOndition("GVChild", "ParentFLAG", "tagName2","Equal","Y")
+gui.frmDash.GsGridDash.SetStyleFormatCOnditionProperty("GVChild","ParentFLAG", "tagName2", "ForeColor", "Blue")
+gui.frmDash.GsGridDash.SetStyleFormatCOnditionProperty("GVChild",  "ParentFLAG", "tagName2", "ApplyToRow", True)
+
+Gui.frmDash.GsGridDash.AddStyleFormatCondition("GVChild","PickFinal","PICK WC",V.Enum.ConditionalOperations!Equal,"Y")
+Gui.frmDash.GsGridDash.SetStyleFormatConditionProperty("GVChild","PickFinal","PICK WC",V.Enum.ConditionalPropertyNames!BackColor,"Green")
+
+Gui.frmDash.GsGridDash.AddStyleFormatCondition("GVChild","PickFinal","NO PICK WC",V.Enum.ConditionalOperations!Equal,"N")
+Gui.frmDash.GsGridDash.SetStyleFormatConditionProperty("GVChild","PickFinal","NO PICK WC",V.Enum.ConditionalPropertyNames!BackColor,"Red")
+
+Gui.frmDash.GsGridDash.AddStyleFormatCondition("GVChild","INACTIVE","INACTIVE",V.Enum.ConditionalOperations!Equal,"Y")
+Gui.frmDash.GsGridDash.SetStyleFormatConditionProperty("GVChild","INACTIVE","INACTIVE",V.Enum.ConditionalPropertyNames!BackColor,"Red")
+
+gui.frmDash.cmdRefresh.enabled(true)
+gui.frmDash.cmdExport.enabled(true)
+
+
+
+gui.frmDash.GsGridDash.Anchor(15)
+
+Function.Intrinsic.UI.CloseWaitDialog 
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadData.End
+
+Program.Sub.Explode_BOM.Start
+V.Local.sFieldNames.Declare 
+V.Local.sTypes.Declare 
+V.Local.sFilePath.Declare 
+V.Local.sParams.Declare 
+V.Local.bExists.Declare 
+V.Local.sRet.Declare 
+V.Local.sFile.Declare 
+v.Local.ifor.Declare 
+V.Local.sRet1.Declare 
+F.Intrinsic.Control.Try
+
+V.Local.sFieldNames.Set("Line*!*Seq*!*Part*!*Description*!*Cat*!*Source*!*Count1*!*OnHand*!*OnOrder*!*Required*!*Net*!*RtrNet*!*Parent*!*ldHrs*!*LdDate*!*filler*!*UM*!*GSS_EXTRA_DESC*!*ParentFLAG")
+V.Local.sTypes.Set("String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String")
+
+
+F.Intrinsic.String.Build("{0}\BOM{1}",V.System.Temp,V.Caller.Terminal,V.Local.sFilePath)
+F.Intrinsic.String.Build("0{0}{1}{0}{2}",V.Ambient.Tab,V.Args.Parent,v.Local.sFilePath,V.Local.sParams)
+F.Intrinsic.File.String2File(V.Local.sFilePath,V.Local.sParams)
+
+F.Global.General.CallWrapperSync(410000,V.Local.sFilePath)
+
+
+
+'Explode w/ qty
+'F.Intrinsic.String.Concat(V.System.Temp,"\EXPLODEBOM",V.Caller.Terminal,".txt",V.Local.sFilePath)
+'F.Intrinsic.String.Build("{2}{0}{1}{0}{3}",V.Ambient.Tab,V.local.sparentpart,0,0,V.Local.sFile)
+'F.Intrinsic.File.String2File(V.Local.sFilePath,V.Local.sFile)
+'F.Global.General.CallWrapperSync(410000,V.Local.sFilePath)
+
+
+F.Intrinsic.File.Exists(V.Local.sFilePath,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.FiletoStringArray(V.Local.sFilePath,V.Ambient.Tab,V.Local.sRet)
+V.Local.sRet.RedimPreserve(0,3)
+F.Intrinsic.File.GetFileNameFromFQN(V.Local.sRet(3),V.Local.sFile.Trim)
+F.Intrinsic.String.Split(V.Local.sFile," ",V.Local.sFile)
+F.Intrinsic.String.Build("{0}\{1}",V.System.Temp,V.Local.sFile(0).Trim,V.Local.sFilePath)
+F.Intrinsic.File.Exists(V.Local.sFilePath,V.Local.bExists)
+
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+
+'load it to a string
+F.Intrinsic.File.File2String(V.Local.sFilePath,V.Local.sRet)
+'f.Intrinsic.String.Replace(v.Local.sRet,"*","",v.Local.sRet)
+
+
+F.Intrinsic.Control.If(v.DataTable.DTTemp.Exists,=,True)
+	F.Data.DataTable.Close("DTTemp")
+Function.Intrinsic.Control.EndIf
+
+
+F.Data.DataTable.CreateFromString("DTTemp",V.Local.sret,V.Local.sFieldNames,V.Local.sTypes,"|~|",v.ambient.newline,True)
+F.Data.DataTable.RemoveColumn("DTTemp", "OnHand")
+F.Data.DataTable.RemoveColumn("DTTemp", "OnOrder")
+'F.Data.DataTable.RemoveColumn("DTTemp", "Cat")
+F.Data.DataTable.RemoveColumn("DTTemp", "Required")
+F.Data.DataTable.RemoveColumn("DTTemp", "Net")
+F.Data.DataTable.RemoveColumn("DTTemp", "RtrNet")
+F.Data.DataTable.RemoveColumn("DTTemp", "ldHrs")
+F.Data.DataTable.RemoveColumn("DTTemp", "ldDate")
+
+f.Data.DataTable.AddColumn("DTTemp","REL",string)
+
+
+f.Intrinsic.String.Build("{0}-{1}",v.Args.Parent.trim,v.Args.Ln.trim,V.Local.sRet1)
+F.Data.DataTable.SetValue("DTTemp",-1,"REL",V.Local.sRet1)
+
+'F.Data.DataTable.SetValue("DTTemp",-1,"REL",v.Args.Parent.trim)
+
+Function.Data.DataTable.DeleteRow("DTTemp",v.dataTable.DTTemp.RowCount--)
+
+f.Intrinsic.Control.For(v.Local.ifor,6,0,-1)
+	Function.Data.DataTable.DeleteRow("DTTemp", v.Local.ifor)
+f.Intrinsic.Control.Next(v.Local.ifor)
+
+
+	f.Data.DataView.Create("DTTemp","DVTemp")
+	Function.Data.DataView.ToDataTableDistinct("DTTemp","DVTemp","DTParent1","Parent")
+	f.Data.DataTable.AddColumn("DTParent1","ParentFLAG","string")
+	F.Data.DataTable.SetValue("DTParent1",-1,"ParentFLAG","Y")
+
+
+	Function.Data.Dictionary.CreateFromDataTable("DICParent","DTParent1","Parent","ParentFLAG")
+	F.Data.Dictionary.SetDefaultReturn("DICParent"," ")
+
+	F.Data.DataTable.FillFromDictionary("DTTemp","DICParent","Part","ParentFLAG")
+
+
+
+F.Data.DataTable.Merge("DTTemp","DTINVTemp",True,1)
+
+F.Data.DataTable.Close("DTTemp")
+f.Data.Dictionary.Close("DICParent")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.Explode_BOM.End
+
+Program.Sub.cmdExport_Click.Start
+V.Local.sFileExport.Declare(String)
+F.Intrinsic.Control.Try
+
+Function.Intrinsic.Control.BlockEvents
+
+F.Intrinsic.String.Build("{0}\GCG_6736_BOMINV.xlsx",V.Caller.LocalGssTempDir,V.Local.sFileExport)
+
+gui.frmDash.GsGridDash.Export(V.Local.sFileExport,"xlsx")
+F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+
+Function.Intrinsic.Control.UNBlockEvents
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdExport_Click.End
+
+Program.Sub.cmdRefresh_Click.Start
+V.Local.sPart.Declare(String)
+F.Intrinsic.Control.Try
+
+V.Local.sPart.Set(v.Screen.frmDash!txtParent.Text)
+
+f.Intrinsic.Control.If(V.Local.sPart.trim,<>,"")
+	f.Intrinsic.Control.CallSub(ClearGrid)
+	Function.Intrinsic.Control.BlockEvents
+	f.Intrinsic.Control.CallSub(loaddata)
+	Function.Intrinsic.Control.UNBlockEvents
+f.Intrinsic.Control.EndIf 
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.cmdBrowse_Click.Start
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidth.Declare(long)
+v.Local.ssql.Declare(String)
+v.Local.ssqlsub.Declare(String)
+v.Local.spart.Declare(String)
+F.Intrinsic.Control.Try
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+'	F.Intrinsic.UI.Browser(3000,"",V.Local.sRet)
+'	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+'		f.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+'		gui.frmDash.txtParent.Text(V.Local.sRet(0))
+'		f.Intrinsic.Control.CallSub(loaddata)
+'	f.Intrinsic.Control.EndIf 
+
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+	v.Local.spart.Set(v.screen.frmDash!txtParent.Text)
+
+'	f.Intrinsic.Control.If(v.Local.spart.trim,<>,"")
+'		f.Intrinsic.String.Build(" and Eng.part like '{0}%'",v.Screen.frmDash!txtParent.Text,v.Local.ssqlsub)
+'	f.Intrinsic.Control.endif
+
+	f.Intrinsic.Control.If(v.Local.spart.trim,<>,"")
+		f.Intrinsic.String.Build(" where Parent like '{0}%'",v.Screen.frmDash!txtParent.Text,v.Local.ssqlsub)
+	f.Intrinsic.Control.endif
+
+'	v.Local.ssql.Set("select distinct Eng.part,description,Txt.Text  from v_bom_eng ENG left join INV_EXTRA_TEXT TXT on Eng.part = Txt.part where IS_Parent = 'Y'")
+
+'	f.Intrinsic.String.Build("select distinct Eng.part,description,Txt.Text  from v_bom_eng ENG left join INV_EXTRA_TEXT TXT on Eng.part = Txt.part where IS_Parent = 'Y' {0}",v.Local.ssqlsub,v.Local.ssql)
+f.Intrinsic.String.Build("select Parent,description,Txt.Text  from v_BOM_MSTR join v_bom_eng ENG on parent = ENG.Part  and sequence_BOM = '0000' left join INV_EXTRA_TEXT TXT on Eng.part = Txt.part  {0}",v.Local.ssqlsub,v.Local.ssql)
+
+'	'This will populate the part browser which will populate all of the fields on the Material tab from both standard and custom inventory tables
+	F.Intrinsic.String.Split("Parent*!*Description*!*Ext Description","*!*",V.Local.sTitles)
+	F.Intrinsic.String.Split("1600*!*2800*!*3500","*!*",V.Local.iWidth)
+	F.Intrinsic.UI.Browser("Select Parent BOM","Con",v.Local.ssql,V.Local.sTitles,V.Local.iWidth,V.Local.sRet)
+
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		f.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		gui.frmDash.txtParent.Text(V.Local.sRet(0))
+		f.Intrinsic.Control.CallSub(txtparent_keypressenter)
+	f.Intrinsic.Control.EndIf 
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdBrowse_Click.End
+
+Program.Sub.GsGridDash_RowCellClick.Start
+V.Local.sPart.Declare(String)
+V.Local.sRev.Declare(String)
+V.Local.sLoc.Declare(String)
+v.Local.iCol.Declare(long)
+v.Local.ssql.Declare(string)
+v.Local.sParam.Declare(string)
+V.Local.bBOMAccess.Declare
+V.Local.bInvAccess.Declare
+V.Local.sFullPart.Declare
+F.Intrinsic.Control.Try
+
+f.Intrinsic.Control.BlockEvents 
+
+f.Intrinsic.Control.SelectCase(v.Args.column)
+f.Intrinsic.Control.Case("FSupply")
+
+'	Function.Intrinsic.UI.InvokeWaitDialog("Opening Screen ....") 
+'	
+'	gui.frmDash.GsGridDash.GetColumnIndexByName("GVParent", "Part", v.Local.iCol)
+'	gui.frmDash.GsGridDash.GetCellValue("GVParent",v.Local.iCol,V.Args.RowIndex,V.Local.sPart)
+'	
+'	gui.frmDash.GsGridDash.GetColumnIndexByName("GVParent", "Rev", v.Local.iCol)
+'	gui.frmDash.GsGridDash.GetCellValue("GVParent",v.Local.iCol,V.Args.RowIndex,V.Local.sRev)
+'
+'	F.Global.Inventory.CallSD(V.Local.sPart,V.Local.sRev,V.Local.sLoc,V.Caller.CompanyCode)
+f.Intrinsic.Control.Case("FCopy")
+	Gui.frmcopypart..Visible(True)
+	gui.frmcopypart..Show 
+	gui.frmDash.GsGridDash.enabled(False)
+'	gui.frmcopypart..waitfordismiss
+f.Intrinsic.Control.Case("CSUPPLY")
+	Function.Intrinsic.UI.InvokeWaitDialog("Opening Screen ....") 
+	gui.frmDash.GsGridDash.GetColumnIndexByName("GVChild", "PartN", v.Local.iCol)
+	gui.frmDash.GsGridDash.GetCellValue("GVChild",v.Local.iCol,V.Args.RowIndex,V.Local.sPart)
+
+	gui.frmDash.GsGridDash.GetColumnIndexByName("GVChild", "Rev", v.Local.iCol)
+	gui.frmDash.GsGridDash.GetCellValue("GVChild",v.Local.iCol,V.Args.RowIndex,V.Local.sRev)
+	
+	F.Intrinsic.String.RPad(V.Local.sPart," ", 17, V.Local.sPart)
+	F.Intrinsic.String.RPad(V.Local.sRev, " ",3, v.Local.sRev)
+	F.Intrinsic.String.Build("{0}{1}", V.Local.sPart, V.Local.sRev, V.Local.sFullPart)
+	
+	F.Intrinsic.String.Build("{0}!*!{1}!*!O", V.Local.sFullPart, V.Local.sLoc, V.Local.sParam)
+	
+	Gui.frmDash..Enabled(False)
+	F.Global.General.CallWrapperSync(300011,V.Local.sParam)
+	'F.Global.Inventory.CallSD(V.Local.sPart,V.Local.sRev,V.Local.sLoc,V.Caller.CompanyCode)
+	F.Intrinsic.UI.ChangeWaitStatus("Closing Supply and Demand...")
+	F.Intrinsic.UI.Sleep(2)
+	Gui.frmDash..Enabled(True)
+'f.Intrinsic.Control.Case("Text")
+''	gui.frmDash.frame_desc.Visible(True)
+''	gui.frmDash.GsGridDash.enabled(False)
+''	gui.frmDash.GsGridDash.GetColumnIndexByName("GVParent", "Text", v.Local.iCol)
+''	gui.frmDash.GsGridDash.GetCellValue("GVParent",v.Local.iCol,V.Args.RowIndex,V.Local.sPart)
+''	gui.frmDash.txtExtdesc.Text(V.Local.sPart)
+'f.Intrinsic.Control.Case("GSS_EXTRA_DESC")
+'	gui.frmDash.GsGridDash.GetColumnIndexByName("GVChild", "PartN", v.Local.iCol)
+'	gui.frmDash.GsGridDash.GetCellValue("GVChild",v.Local.iCol,V.Args.RowIndex,V.Local.sPart)
+'	
+'	f.Intrinsic.String.Build("select * from INV_EXTRA_TEXT where part = '{0}'",V.Local.sPart,v.Local.ssql)
+'	F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+'	f.Intrinsic.Control.If(v.ODBC.con!rst.EOF,=,False)
+'		gui.frmDash.txtExtdesc.Text(v.ODBC.con!rst.FieldValTrim!Text)
+'	f.Intrinsic.Control.EndIf 
+'	f.ODBC.Con!rst.close
+'	gui.frmDash.frame_desc.Visible(True)
+'	gui.frmDash.GsGridDash.enabled(False)
+f.Intrinsic.Control.Case("PARTN")
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+	Function.Intrinsic.UI.InvokeWaitDialog("Opening Screen ....") 
+	gui.frmDash.GsGridDash.GetCellValueByColumnName("GVChild","ParentFLAG",v.Args.RowIndex,v.Local.sPart)
+	gui.frmDash.GsGridDash.GetCellValueByColumnName("GVChild","PartO",v.Args.RowIndex,v.Local.sParam)
+	f.Intrinsic.Control.If(v.Local.sPart.Trim,=,"Y")
+		F.Intrinsic.Control.If(V.Screen.frmDash!optView.Value)
+			F.Global.Callwrapper.New("Test","Manufacturing.BOM.ViewBOMMaintenance")
+		F.Intrinsic.Control.Else
+			F.Global.Security.CheckUserAccessIPM(467,V.Local.bBOMAccess)
+			F.Intrinsic.Control.If(V.Local.bBOMAccess)
+				F.Global.Callwrapper.New("Test","Manufacturing.BOM.OpenBOMMaintenance")
+			F.Intrinsic.Control.Else
+				F.Global.Callwrapper.New("Test","Manufacturing.BOM.ViewBOMMaintenance")
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		F.Global.Callwrapper.SetProperty("Test","Parent",v.Local.sParam)
+		Gui.frmDash..Enabled(False)
+		F.Global.CallWrapper.Run("Test")
+		F.Intrinsic.UI.ChangeWaitStatus("Closing Core Bill of Material Screen...")
+		F.Intrinsic.UI.Sleep(1)
+		Gui.frmDash..Enabled(True)
+	f.Intrinsic.Control.Else
+		F.Intrinsic.Control.If(V.Screen.frmDash!optView.Value)
+			f.Intrinsic.string.Build("V!*!{0}!*!{1}",v.Local.sParam,v.Local.sLoc,v.Local.sParam)
+		F.Intrinsic.Control.Else
+			F.Global.Security.CheckUserAccessIPM(310,V.Local.bInvAccess)
+			F.Intrinsic.Control.If(v.Local.bInvAccess)
+				f.Intrinsic.string.Build("O!*!{0}!*!{1}",v.Local.sParam,v.Local.sLoc,v.Local.sParam)
+			F.Intrinsic.Control.Else
+				f.Intrinsic.string.Build("V!*!{0}!*!{1}",v.Local.sParam,v.Local.sLoc,v.Local.sParam)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		Gui.frmDash..Enabled(False)
+		Function.Global.General.CallWrapperSync(300000,v.Local.sParam)
+		F.Intrinsic.UI.ChangeWaitStatus("Closing Core Bill of Material Screen...")
+		F.Intrinsic.UI.Sleep(1)
+		Gui.frmDash..Enabled(True)
+	f.Intrinsic.Control.EndIf 
+f.Intrinsic.Control.CaseElse 
+	f.Intrinsic.Control.UnBlockEvents 
+	f.Intrinsic.Control.ExitSub 
+f.Intrinsic.Control.EndSelect 
+
+'f.Intrinsic.UI.Msgbox(v.Args.column)
+
+
+Function.Intrinsic.UI.CloseWaitDialog
+
+f.Intrinsic.Control.UnBlockEvents 
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.GsGridDash_RowCellClick.End
+
+Program.Sub.cmddescClose_Click.Start
+F.Intrinsic.Control.Try
+
+gui.frmDash.txtExtdesc.Text("")
+gui.frmDash.GsGridDash.enabled(True)
+gui.frmDash.frame_desc.Visible(false)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmddescClose_Click.End
+
+Program.Sub.txtParent_KeyPressEnter.Start
+v.Local.ssql.Declare(String)
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Screen.frmDash!txtParent.Text.Trim,=,"")
+	Gui.frmDash.txtParent.Text("")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+Gui.frmDash.txtParent.Text(V.Screen.frmDash!txtParent.Text.UCase)
+
+f.Intrinsic.String.Build("select * from v_bom_mstr where parent = '{0}'",v.Screen.frmDash!txtParent.Text,v.Local.ssql)
+F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+f.Intrinsic.Control.If(v.ODBC.con!rst.EOF,=,False)
+	f.Intrinsic.Control.CallSub(loaddata)
+f.Intrinsic.Control.Else
+'	f.Data.DataTable.Close("dtChild")
+	f.Intrinsic.Control.CallSub(ClearGrid)
+	f.Intrinsic.UI.Msgbox("BOM parent not found")
+	gui.frmDash.txtParent.Text("")
+f.Intrinsic.Control.EndIf 
+f.ODBC.Con!rst.close
+
+'Gui.frmDash.optEdit.SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtParent_KeyPressEnter.End
+
+Program.Sub.cmdCopyPart_Click.Start
+V.Local.sPart.Declare(String)
+v.Local.ssql.Declare(String)
+F.Intrinsic.Control.Try
+
+
+f.Intrinsic.Control.If(v.Screen.frmcopypart!txtCPart.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data, Field cannot be blank")
+	gui.frmcopypart.txtCPart.SetFocus 
+	f.Intrinsic.Control.ExitSub 
+f.Intrinsic.Control.elseIf(v.Screen.frmcopypart!txtCdesc.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data, Field cannot be blank")
+	gui.frmcopypart.txtCDesc.SetFocus 
+	f.Intrinsic.Control.ExitSub 
+f.Intrinsic.Control.EndIf 
+
+F.Intrinsic.String.GSSPartString(v.Screen.frmcopypart!txtCPart.text,v.Screen.frmcopypart!txtCRev.text,V.Local.sPart)
+
+f.Intrinsic.String.Build("select parent from v_bom_mstr where parent = '{0}'",V.Local.sPart,v.Local.ssql)
+F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+f.Intrinsic.Control.If(v.ODBC.con!rst.EOF,=,True)
+	Function.Intrinsic.UI.InvokeWaitDialog("Copying in Progress...")
+	F.Intrinsic.String.GSSPartString(v.Screen.frmcopypart!txtCPart.text,v.Screen.frmcopypart!txtCRev.text,V.Local.sPart)
+
+	F.Global.Inventory.CreatePart(V.Local.sPart,v.Screen.frmcopypart!txtcUOM.text,v.Screen.frmcopypart!txtCDesc.text,"",v.Screen.frmcopypart!txtCPL.text,"","","",v.Screen.frmcopypart!txtcPrice.text,"NOMAINT")
+
+	f.Intrinsic.String.Build("Insert into BOM_ENG select '{0}',LOCATION,SIMILAR,'{1}',MEMO_1,MEMO_2,CODE_REVISION,DATE_REVISION,DRAWING_SIZE,BOM_TYPE,VENDOR,VENDOR_PART,SORT,IS_PARENT,PURGE_FLAG,FILLER from BOM_ENG  where part = '{2}'",V.Local.sPart,v.Screen.frmcopypart!txtCDesc.text,v.Screen.frmDash!txtParent.text,v.Local.ssql)    
+	f.ODBC.Connection!con.Execute(v.local.ssql)
+	f.Intrinsic.String.Build("Insert into BOM_Mstr select '{0}',SEQUENCE_BOM,INSERT_BOM,DATE_MAINTENANCE,COST,QUANTITY,PART,DATE_START,DATE_STOP,BM_SERIAL_START,BM_SERIAL_STOP,UM_INVENTORY,PURGE_FLAG,ORDR_USR_FLAG,QUANTITY_6,DRAWING,TAG,CATEGORY,SOURCE,FREQUENCY,DATE_LAST_CHG,TIME_LAST_CHG,LAST_CHG_BY,LAST_CHG_PROG,DRAWING_SIZE,REQ_TRACE,COST_DATE,BOM_COMPLETE,INACTIVE,CHG_REV,SETUP_QTY,ROUTER_SEQ, ROUTER_LABR_SEQ,FILLER from BOM_Mstr  where Parent = '{1}'",V.Local.sPart,v.Screen.frmDash!txtParent.text,v.Local.ssql)    
+	f.ODBC.Connection!con.Execute(v.local.ssql)
+
+	f.Intrinsic.UI.Msgbox("BOM copied successfully")	
+	Gui.frmcopypart..ClearGroup(0)
+	Gui.frmcopypart..Visible(false)
+	gui.frmDash.GsGridDash.enabled(True)
+	Function.Intrinsic.UI.CloseWaitDialog 
+f.Intrinsic.Control.Else
+	f.Intrinsic.UI.Msgbox("BOM parent already exist")
+f.Intrinsic.Control.EndIf 
+f.ODBC.Con!rst.close
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdCopyPart_Click.End
+
+Program.Sub.cmdPL_Click.Start
+V.Local.sRet.Declare(String)
+F.Intrinsic.Control.Try
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser(130,"",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		f.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		gui.frmcopypart.txtCPL.Text(V.Local.sRet(0))
+	f.Intrinsic.Control.EndIf	
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdPL_Click.End
+
+Program.Sub.frmcopypart_UnLoad.Start
+F.Intrinsic.Control.Try
+
+gui.frmcopypart..Visible(false)
+gui.frmDash.GsGridDash.enabled(True)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.frmcopypart_UnLoad.End
+
+Program.Sub.cmdcopybom_Click.Start
+F.Intrinsic.Control.Try
+
+f.Intrinsic.Control.If(v.Screen.frmDash!txtParent.Text,<>,"")
+	Function.Intrinsic.Control.BlockEvents
+	Gui.frmcopypart..Visible(True)
+	gui.frmcopypart..Show 
+	gui.frmDash.GsGridDash.enabled(False)
+	Function.Intrinsic.Control.UnBlockEvents
+f.Intrinsic.Control.endif
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdcopybom_Click.End
+
+Program.Sub.ClearGrid.Start
+F.Intrinsic.Control.Try
+
+'f.Data.DataTable.Close("DTChild")
+'f.Data.DataTable.Close("DTINVTemp")
+'gui.frmDash.GsGridDash.ClearRows("GVVendor4")
+'gui.frmDash.GsGridDash.ClearRows("GVVendor5")
+'gui.frmDash.GsGridDash.ClearRows("GVChild")
+
+F.Intrinsic.Control.If(v.DataTable.dtChild.Exists,=,True)
+	F.Intrinsic.Control.CallSub(Serialize)
+	f.Data.DataTable.Close("dtChild")
+f.Intrinsic.Control.EndIf 
+
+F.Data.DataTable.CreateFromSQL("DTclear","con","Select '' as ' '")
+'F.Data.DataView.Create("DTclear","DVclear")
+'gui.frmDash.GsGridDash.AddGridviewFromDataview("GV","DTclear","DVclear")
+
+gui.frmDash.GsGridDash.AddGridviewFromDatatable("GV","DTclear")
+gui.frmDash.GsGridDash.MainView("GV")
+f.Data.DataTable.Close("DTclear")
+
+
+
+
+gui.frmDash.cmdRefresh.enabled(false)
+gui.frmDash.cmdExport.enabled(false)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.ClearGrid.End
+
+Program.Sub.cmdclear_Click.Start
+F.Intrinsic.Control.Try
+
+gui.frmDash.txtParent.Text("")
+gui.frmDash.txtExtdesc.Text("")
+f.Intrinsic.Control.CallSub(cleargrid)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdclear_Click.End
+
+Program.Sub.Serialize.Start
+V.Local.Serialize.Declare
+
+'GridView - GVCHILD
+Gui.frmDash.GsGridDash.Serialize("GVCHILD",V.Local.Serialize)
+F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GVCHILD",6736,2000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,V.Local.Serialize)
+
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+V.Local.Serialize.Declare
+
+'GridView - GVCHILD
+F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"GVCHILD",6736,2000,6,"",V.Local.Serialize)
+F.Intrinsic.Control.If(V.Local.Serialize.Trim,<>,"")
+	Gui.frmDash.GsGridDash.Deserialize(V.Local.Serialize)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Deserialize.End
+
+Program.Sub.cmdLookup_Click.Start
+V.Local.sRet.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser(3000,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"***CANCEL***")
+	Gui.frmDash.txtParent.Text("")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.frmDash.txtParent.Text(V.Local.sRet(0))
+	F.Intrinsic.Control.CallSub(txtParent_KeyPressEnter)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMessage,"ScriptFile",V.Caller.ScriptFile,"CurrentSubroutine",V.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdLookup_Click.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_4632_BOMINV.g2u$}$RAN$}$8/14/2017 4:11:50 PM$}$False
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$This project will create 2 custom dashboards. One will be for BOM's with the other for Inventory, and they will run from custom menu items.
+${$5$}$2.0.0.0$}$2
+${$6$}$triley$}$20240119122411995$}$iK6nerqp9nur1h1iSBfRKBBz1ENCgYv6Y/3OAlvIz+w6I/lUiEJjYOolHHyRhO0atKJR0gsTNww=
+Program.Sub.Comments.End
